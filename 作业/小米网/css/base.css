@@ -1,0 +1,44 @@
+@charset "utf-8";
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin:0; padding:0; }
+fieldset, img,input,button { border:none; padding:0;margin:0;outline-style:none; }
+i, cite, em, var, address, dfn {
+    font-style: italic;
+}
+ul, ol { list-style:none; }
+input { padding-top:0; padding-bottom:0; font-family: "SimSun","宋体";}
+select, input { vertical-align:middle;}
+select, input, textarea { font-size:12px; margin:0; }
+textarea { resize:none; } /*防止拖动*/
+img {border:0;	vertical-align:middle; }  /*  去掉图片低测默认的3像素空白缝隙*/
+table { border-collapse:collapse; }
+body{
+font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+color: #333;
+background-color: #fff;
+min-width: 1226px;
+    height:9999px;
+}
+a {
+color: #757575;
+text-decoration: none;
+}
+html, button, input, select, textarea {
+font-family: sans-serif;
+}
+.container {
+    width: 1226px;
+    margin: 0 auto;
+}
+.clearfix:before,.clearfix:after{
+    display: table;
+    content: "";
+}
+.clearfix:after{
+    clear: both;
+}
+.clearfix{
+    *zoom: 1;
+}
+.mite-bar{
+    width: 100%;
+}

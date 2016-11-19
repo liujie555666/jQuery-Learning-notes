@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            //$("a").replaceWith("b") 用b替换a
+//            $("p").replaceWith("<b>嘿嘿嘿嘿嘿嘿嘿嘿嘿");
+            //$("a").replaceAll("b") 用a替换b
+            $("<h1>雄起吧</h1>").replaceAll($("span"));
+            $("input[type='button']").click(function () {
+                //比较狠 连子节点一块删,还可以删除自己;
+//                $("div").eq(0).remove();
+//                $("input").remove();
+                // 只删除子节点和其内容,只保留外标签
+                $("p").empty();
+            });
+
+
+        })
+    </script>
+</head>
+<body>
+<input type="button" value="删除"/>
+<div>
+    <p>卧奥斯卡等级</p>
+    <span>奥斯卡非常v</span>
+    <p>卧奥斯卡等级</p>
+    <span>你吃吧vu</span>
+</div><div>
+    <p>卧奥斯卡等级</p>
+    <span>奥斯卡非常v</span>
+    <p>卧奥斯卡等级</p>
+    <span>你吃吧vu</span>
+</div><div>
+    <p>卧奥斯卡等级</p>
+    <span>奥斯卡非常v</span>
+    <p>卧奥斯卡等级</p>
+    <span>你吃吧vu</span>
+</div><div>
+    <p>卧奥斯卡等级</p>
+    <span>奥斯卡非常v</span>
+    <p>卧奥斯卡等级</p>
+    <span>你吃吧vu</span>
+</div><div>
+    <p>卧奥斯卡等级</p>
+    <span>奥斯卡非常v</span>
+    <p>卧奥斯卡等级</p>
+    <span>你吃吧vu</span>
+</div>
+</body>
+</html>

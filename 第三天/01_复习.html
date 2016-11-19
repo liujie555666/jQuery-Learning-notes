@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .div{
+            width: 200px;
+            height: 200px;
+        }
+        .color{
+            color: red;
+            background-color: #666;
+        }
+
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            $("button").click(function () {
+                //addClass 添加class,不删除以前的class;
+                $(".div").addClass("color").removeClass("div");
+                $("input").val("ldhgvjkbaegvbh");
+                alert($("input").val());
+            });
+        })
+    </script>
+</head>
+<body>
+<input type="text">
+<div class="div">拉克是几点发货部</div>
+<div class="div">拉克是几</div>
+<button>vjahd</button>
+</body>
+</html>

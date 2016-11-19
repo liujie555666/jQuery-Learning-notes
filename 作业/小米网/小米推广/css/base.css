@@ -1,0 +1,62 @@
+@charset "utf-8";
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin:0; padding:0; }
+fieldset, img,input,button { border:none; padding:0;margin:0;outline-style:none; }
+i, cite, em, var, address, dfn {
+    font-style:normal;
+}
+ul, ol { list-style:none; }
+input { padding-top:0; padding-bottom:0; font-family: "SimSun","宋体";}
+select, input { vertical-align:middle;}
+select, input, textarea { font-size:12px; margin:0; }
+textarea { resize:none; } /*防止拖动*/
+img {border:0;	vertical-align:middle; }  /*  去掉图片低测默认的3像素空白缝隙*/
+table { border-collapse:collapse; }
+body{
+font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+color: #333;
+    font-family:"Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+background-color: #fff;
+min-width: 1150px;
+    max-width: 2560px;
+    height:9999px;
+}
+a {
+color: #757575;
+text-decoration: none;
+}
+html, button, input, select, textarea {
+font-family: sans-serif;
+}
+.btn {
+    display: inline-block;
+    width: 154px;
+    height: 44px;
+    line-height: 44px;
+    border: 1px solid #fff;
+    text-align: center;
+}
+.container {
+    width: 1008px;
+    margin: 0 auto;
+    *zoom: 1;
+}
+.container:before,.container:after{
+    display: table;
+    content: "";
+}
+.container:after{
+    clear: both;
+}
+.clearfix:before,.clearfix:after{
+    display: table;
+    content: "";
+}
+.clearfix:after{
+    clear: both;
+}
+.clearfix{
+    *zoom: 1;
+}
+.mite-bar{
+    width: 100%;
+}

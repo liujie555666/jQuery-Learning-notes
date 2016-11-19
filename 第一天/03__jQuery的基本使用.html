@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            height: 200px;
+            background-color: pink;}
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("div").hide(1000,function () {
+                    alert(321);
+                });
+            });
+        })
+    </script>
+</head>
+
+<body>
+<input type="button" id="btn" value="按钮"/>
+<div></div>
+</body>
+</html>

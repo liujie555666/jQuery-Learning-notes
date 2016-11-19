@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        //选择性设置
+        $(document).ready(function () {
+            $("li").css("font-size",function (i,v) {
+                console.log(i+"          "+v);
+                if(i==1){
+                    return "50px";
+                }
+                if(i!=2){
+                    return "80px";
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+<ul>
+    <li>我是li01</li>
+    <li>我是li02</li>
+    <li>我是li03</li>
+    <li>我是li04</li>
+    <li>我是li05</li>
+    <li>我是li06</li>
+    <li>我是li07</li>
+    <li>我是li08</li>
+    <li>我是li09</li>
+</ul>
+</body>
+</html>

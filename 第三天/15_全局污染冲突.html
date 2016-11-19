@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+//        $(function () {
+//            var $=1123;
+//            var wfJquery=jQuery.noConflict();
+//
+//            wfJquery("li").html("ssss");
+////            jQuery("li").html("ssss");
+//            console.log($);
+//        });
+        $(function () {
+            //声明了以个$变量
+            var $={name:"asdfgh"}
+            //第一种方法
+            //在这种情况下,不能用jQuery下面的$,因为声明了全局变量,造成了$函数冲突,所以我们使用jQuery函数.
+//            jQuery("ul li").text("asdkjasdf");
+            //第二种
+            //提前释放掉$函数
+            var wfJquery=$.noConflict();
+            var $={name:"asdfgh"};
+            wfJquery("li").html("ssss");
+
+        });
+    </script>
+</head>
+<body>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+</body>
+</html>

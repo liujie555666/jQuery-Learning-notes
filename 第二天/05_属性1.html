@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            margin-top: 20px;
+        }
+
+        .box3 {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            margin-top: 20px;
+        }
+
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        .current{
+            width: 400px;
+            height: 300px;
+            border: 2px solid blue;
+            background-color: aqua;
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            //为对应的增添class
+            $("div:first").addClass("box1");
+            $("div:eq(1)").addClass("box2");
+            $("div:eq(3)").addClass("box3 box1 box box5 box4");
+            $("div:last").addClass("box2");
+            $("div:eq(2)").addClass("box3");
+            //删除class
+//            $("div:eq(3)").removeClass("box3")
+            //不写是删除所有class
+//            $("div:eq(3)").removeClass();
+            //
+//            $("div:eq(3)").removeClass("box3 box1 box");
+            //删除函数返回需要删除的属性值
+            $("div:eq(3)").removeClass(function () {
+                return "box3 box1 box";
+            });
+            //存在就删除,不存在就增添;
+//            $("div:eq(1)").toggleClass("box3");
+//            $("div:eq(1)").toggleClass("box2");
+            //布尔值toggleClass("current",true/false); true就
+            var mun=1;
+               $("button").click(function () {
+                   mun+=1;
+                   $("div:eq(4)").toggleClass("current",mun%4===0);
+               });
+        });
+
+
+    </script>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<button>click</button>
+</body>
+</html>

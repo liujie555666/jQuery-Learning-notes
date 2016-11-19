@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .wrap{
+            height: 300px;
+            background-color: #fff;
+        }
+    </style>
+    <link rel="stylesheet" href="jquery-ui.css">
+    <script src="jquery-1.11.1.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $(".wrap").tabs();
+            $(".dialog").dialog();
+        })
+    </script>
+</head>
+<body>
+<h2>MyTabs</h2>
+<div class="wrap">
+    <ul>
+        <li><a href="#tab1">页面1</a></li>
+        <li><a href="#tab2">页面2</a></li>
+        <li><a href="#tab3">页面3</a></li>
+        <li><a href="#tab4">页面3</a></li>
+        <li><a href="#tab5">页面3</a></li>
+        <li><a href="#tab6">页面3</a></li>
+        <li><a href="#tab7">页面3</a></li>
+    </ul>
+    <div id="tab1">01</div>
+    <div id="tab2">02</div>
+    <div id="tab3">03</div>
+    <div id="tab4">03</div>
+    <div id="tab5">03</div>
+    <div id="tab6">03</div>
+    <div id="tab7">03</div>
+</div>
+<div class="dialog" title="房购房价格">
+    我i痴痴缠缠出口处
+</div>
+</body>
+</html>

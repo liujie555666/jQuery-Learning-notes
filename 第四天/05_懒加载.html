@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>懒加载插件案例</title>
+    <style>
+        div{
+            height: 1000px;
+        }
+    </style>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script src="jquery.lazyload.min.js"></script>
+    <script>
+        $(function () {
+            $("img").lazyload({
+//                placeholder: "img/images/12%20(1).jpg",
+                effect:"slidedown"
+                    });
+        });
+    </script>
+</head>
+<body>
+<div></div>
+<img src="images/12%20(7).jpg" data-original="images/12%20(1).jpg" height="250" width="650" alt="">
+<br>
+<img  src="images/12%20(7).jpg" data-original="images/12%20(2).jpg" height="250" width="650" alt="">
+<br>
+<img  src="images/12%20(7).jpg" data-original="images/12%20(3).jpg" height="220" width="320" alt="">
+<br>
+<img  src="images/12%20(7).jpg" data-original="images/12%20(4).jpg" height="220" width="320" alt="">
+<br>
+<img  src="images/12%20(7).jpg" data-original="images/12%20(5).jpg" height="220" width="320" alt="">
+<br>
+<img src="images/12%20(7).jpg"  data-original="images/12%20(6).jpg" height="110" width="160" alt="">
+<br>
+<img  src="images/12%20(7).jpg" data-original="images/12%20(7).jpg" height="110" width="160" alt="">
+</body>
+</html>

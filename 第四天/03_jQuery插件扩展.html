@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        //给jQuery全局对象扩展一个方法
+        $.log=function () {
+            console.log(new Date());
+        };
+        $.log();//这样的话只能全局的$来调
+        $.fn.log=function () {
+            console.log($(this).text());
+        };
+        $(document).ready(function () {
+            $("ul").on("click","li",function () {
+               $(this).log();
+            });
+        });
+    </script>
+</head>
+<body>
+<ul>
+    <li>爱我快乐就好01</li>
+    <li>爱我快乐就好02</li>
+    <li>爱我快乐就好03</li>
+    <li>爱我快乐就好04</li>
+    <li>爱我快乐就好05</li>
+    <li>爱我快乐就好06</li>
+    <li>爱我快乐就好07</li>
+    <li>爱我快乐就好08</li>
+    <li>爱我快乐就好09</li>
+    <li>爱我快乐就好10</li>
+    <li>爱我快乐就好11</li>
+    <li>爱我快乐就好12</li>
+    <li>爱我快乐就好13</li>
+    <li>爱我快乐就好14</li>
+    <li>爱我快乐就好15</li>
+    <li>爱我快乐就好16</li>
+    <li>爱我快乐就好17</li>
+    <li>爱我快乐就好18</li>
+    <li>爱我快乐就好19</li>
+    <li>爱我快乐就好20</li>
+    <li>爱我快乐就好21</li>
+    <li>爱我快乐就好22</li>
+    <li>爱我快乐就好23</li>
+    <li>爱我快乐就好24</li>
+    <li>爱我快乐就好25</li>
+    <li>爱我快乐就好26</li>
+    <li>爱我快乐就好27</li>
+    <li>爱我快乐就好28</li>
+    <li>爱我快乐就好29</li>
+    <li>爱我快乐就好30</li>
+</ul>
+</body>
+</html>

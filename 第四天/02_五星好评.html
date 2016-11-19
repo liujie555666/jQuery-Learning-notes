@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;}
+        .comment{
+            /*letter-spacing:-12px;*/
+            /*设置字符之间的间距*/
+            /*word-spacing:-18px;*/
+            /*设置单词的间距   我是 中国人  (两个单词)*/
+            color: teal;
+            /*font-size: 0;*/
+            /*方法一把空格设为0*/
+            list-style: none;
+        }
+        .comment li{
+        /*display: inline-block;*/
+            font-size: 40px;
+            float: left;
+            cursor: pointer;
+        }
+    </style>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(function () {
+            var wjx_sel="★";
+            var wjx_none="☆";
+            $(".comment").on("mouseenter","li",function () {
+           //prevAll()当前节点前面全部兄弟节点
+                // nextAll() 当前节点后面全部兄弟节点
+                $(this).text(wjx_sel).prevAll().text(wjx_sel).end().nextAll().text(wjx_none);
+                //记录当前点击的是哪个☆
+            }).on("click","li",function () {
+//                $(this).addClass("clicked").siblings().removeClass("clicked");
+                $(".comment").data("selected",$(this));
+            }).on("mouseleave",function () {
+                $(".comment li").text(wjx_none);
+                var $li=$(".comment").data("select");
+                $li.text(wjx_sel).prevAll().text(wjx_sel).end().nextAll().text(wjx_none);
+                //第三部当鼠标一开先清空,然后把clicked(包括自己)之前的五角星全部变成实心的,后面变成空心
+            });
+        })
+    </script>
+</head>
+<body>
+<ul class="comment">
+    <li>☆</li>
+    <li>☆</li>
+    <li>☆</li>
+    <li>☆</li>
+    <li>☆</li>
+</ul>
+</body>
+</html>

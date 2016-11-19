@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            $("li").each(function (inx,ele) {
+//                alert(inx+ele.innerHTML);
+                alert(inx+$(ele).html());
+            })
+        })
+    </script>
+</head>
+<body>
+<ul>
+    <li>我睡成绩好v是01</li>
+    <li>我睡成绩好v是02</li>
+    <li>我睡成绩好v是03</li>
+    <li>我睡成绩好v是04</li>
+    <li>我睡成绩好v是05</li>
+    <li>我睡成绩好v是06</li>
+    <li>我睡成绩好v是07</li>
+    <li>我睡成绩好v是08</li>
+    <li>我睡成绩好v是09</li>
+    <li>我睡成绩好v是10</li>
+</ul>
+</body>
+</html>

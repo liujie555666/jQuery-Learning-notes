@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+//        $(document).ready(function () {
+//            alert("我是立刻说的话闭包");
+//        })
+//        $(document).ready(function () {
+//            alert("woshi jhsdfnb vc");
+//        })
+//        $(document).ready(function () {
+//            alert("31265169494321");
+//        })
+//        onload=function () {
+//            alert("kjahbsd");
+//        }
+//        onload=function () {
+//            alert("爱健康水果大厦的");
+//        }
+        var jQuery=function (dom) {
+            var obj={
+                ready:function (                            func) {
+//                    alert("卡号就是个地块v");
+                    //判断onload有没有被赋值,或者说有没有这个事件;
+                    //1.有的话接受一个新函数
+                    //2.么有直接赋值给onload;
+                    if(typeof  dom.onload==="function"){
+                        var oldFunc=dom.onload;
+                        dom.onload=function () {
+                            oldFunc();
+                            func();
+                        }
+                    }else {
+                        dom.onload=func;
+                    }
+                }
+            };
+            return obj;
+        }
+        jQuery(window).ready(function () {
+            alert("jshkdgflais1");
+        });
+jQuery(window).ready(function () {
+            alert("jshkdgflais2");
+        });
+jQuery(window).ready(function () {
+            alert("jshkdgflais3");
+        });
+jQuery(window).ready(function () {
+            alert("jshkdgflais4");
+        });
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

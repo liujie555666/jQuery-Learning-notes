@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .all{
+            font-style: italic;
+            font-size: 15px;
+        }
+        div{
+            border: 1px solid green;
+            width: 200px;
+            /*height: 200px;*/
+            margin-top:31px;
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+//            //插在div中的最后 append:插入节点;可以插入标签,也已插入内容.
+//            $("div").append("<p class='all'>我是一个");
+//            $("div").append("一个");
+//
+//            $("div").append($("div h1:last"));
+//            $("div").append(document.createElement("span"));
+//
+//            $("div").append(function (index,html) {
+////                alert(index);alert(html);
+//                return "<a href=''>卧室奥斯卡";
+////                return $("div>p");
+//            });
+            //a.after(b);在a的后面插入元素;
+     $("div").after("<h>ljhbsdfbas");
+
+            $("div").before("<h>ljhbsdfbas");
+         $()
+        });
+    </script>
+</head>
+<body>
+<div>我是一个div <h1>你好吗?</h1></div>
+<div>我是一个div <h1>你好吗?</h1></div>
+<div>我是一个div <h1>你好吗?</h1></div>
+<div>我是一个div <h1>你好吗?</h1></div>
+</body>
+</html>

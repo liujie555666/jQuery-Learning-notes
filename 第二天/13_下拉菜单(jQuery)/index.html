@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #wrap{
+            width: 330px;
+            height: 30px;
+            margin: 100px auto;
+            background: url(img/bg.jpg);
+            padding-left:10px;
+        }
+        #wrap li{
+            float: left;
+            width: 100px;
+            height: 30px;
+            margin-right:10px;
+        }
+        #wrap a{
+            color: black;
+            text-align: center;
+            display: block;
+            line-height: 30px;
+            width: 100px;
+            height: 30px;
+            text-decoration: none;
+            background: url(img/libg.jpg);
+        }
+        #wrap li ul{
+            display: none;
+        }
+    </style>
+    <script src="../jquery-1.11.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            //
+            $("#wrap li").mouseenter(function () {
+                $(this).children("ul").stop(true,true).show(500);
+            });
+            $("#wrap li").mouseleave(function () {
+                $(this).children("ul").stop(true,true).hide(500);
+            });
+            //第二种
+//           $("#wrap li").hover(function () {
+//               $(this).children("ul").show();
+//           },function () {
+//               $(this).children("ul").hide();
+//           })
+            //第三种
+//            $("#wrap li").hover(function () {
+//                var box=$(this).children("ul");
+//                var isShow=box.css("display");
+//                isShow==="block"?box.hide():box.show();
+//            })
+            //第四种
+//            $("#wrap li").hover(function () {
+//                $(this).children("ul").slideToggle(10);
+//            })
+        });
+    </script>
+</head>
+<body>
+<div id="wrap">
+    <ul>
+        <li><a href="">一级菜单1</a>
+            <ul>
+                <li><a href="">二级菜单1</a></li>
+                <li><a href="">二级菜单1</a></li>
+                <li><a href="">二级菜单1</a></li>
+            </ul>
+        </li>
+        <li><a href="">一级菜单1</a>
+            <ul>
+                <li><a href="">二级菜单2</a></li>
+                <li><a href="">二级菜单2</a></li>
+                <li><a href="">二级菜单2</a></li>
+            </ul>
+        </li>
+        <li><a href="">一级菜单1</a>
+            <ul>
+                <li><a href="">二级菜单3</a></li>
+                <li><a href="">二级菜单3</a></li>
+                <li><a href="">二级菜单3</a></li>
+            </ul>
+        </li>
+    </ul>
+</div> 
+</body>
+</html>

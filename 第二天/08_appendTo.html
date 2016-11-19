@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            $("div").css({
+                border:"1px solid red",
+            });
+            //A.appendTo(b)..吧A对象插入到b中;会吧A删除掉;
+//            $("p").appendTo("div");
+//            //prepend在前面插入
+//            $("div").prepend("按时间的话");
+//            $("div").prepend(function (i,h) {
+////                alert(i);
+////                alert(h);
+//                return "kjsah   " +
+//                        "f" +
+//                        "ga" +
+//                        "          osdu";
+//            });
+            $("p").prependTo($("div"));
+        });
+    </script>
+</head>
+<body>
+<p>ikjwbefvnc</p>
+<div>我是div1</div>
+<div>我是div2</div>
+<div>我是div3</div>
+</body>
+</html>

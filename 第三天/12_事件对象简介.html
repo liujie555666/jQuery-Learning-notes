@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+$(function () {
+    $("div").on("click",{aa:"sv"},function (e) {
+        alert("点击了div");
+        alert(e.data.aa);
+
+    })
+    $("div").on("click","p",function (e) {
+        alert("点击了p");
+        e.stopPropagation();
+    })
+})
+    </script>
+</head>
+<body>
+<div>我是的萨芬计划过色的div
+    <p>我是神经病的v安静好的v福安p</p>
+</div>
+</body>
+</html>

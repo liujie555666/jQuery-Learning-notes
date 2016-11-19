@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            //dom对象转换成jQuery对象
+            var btn=document.getElementById("btn");
+//            btn.click(); //js中是调用函数一次
+            $(btn).click(function () {
+                $("div").hide();
+            });
+            //jQuery对象转化为dom对象
+//            $("button")[1].onclick=function () {
+//                alert("阿妹");
+//            }
+            //2
+            $("button").get(1).onclick=function () {                alert("阿妹");
+            }
+            $("#btn")[0].onclick=function () {
+                alert("阿niu");
+            }
+        })
+            </script>
+</head>
+<body>
+<button id="btn">我是阿牛</button>
+<button>阿妹</button>
+<div></div>
+</body>
+</html>

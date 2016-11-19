@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        img {
+            position: absolute;
+        }
+    </style>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(function () {
+            $(document).on("click",function (eve) {
+//                $("img[src]").css({
+//                    top:eve.pageY,
+//                    left:eve.pageX
+//                });
+                $("img").animate({
+                    top:eve.pageY-$("img").height()/2,
+                    left:eve.pageX-$("img").width()/2
+                },800);
+            })
+            $(document).on("keydown",function () {
+                
+            })
+        })
+    </script>
+   
+</head>
+<body>
+<img src="img/ts.gif" alt=""/>
+</body>
+</html>

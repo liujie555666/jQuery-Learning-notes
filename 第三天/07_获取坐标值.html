@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;}
+        body{
+            height: 999999px;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #666;
+            position: relative;
+            top: 60px;
+            left: 8px;
+        }
+        p{
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            font-size: 30px;
+            font-weight: 700;
+            color: red;
+        }
+        #btn1{
+            position: absolute;
+            bottom: 0;
+        }#btn2{
+            position: absolute;
+            bottom: 0;
+                     left: 100px;
+        }
+        #boxnb{
+            width: 100px;
+            height: 100px;
+            margin-top: 100px;
+            background-color: #369;
+            position: absolute;
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            $("#btn1").click(function () {
+//              console.log($("div").offset());
+                console.log("上"+$(".box1").offset().top+"左"+$(".box1").offset().left);
+            })
+            //获取相对与父元素的位置
+            $("#btn2").click(function () {
+//              console.log($("div").offset());
+                console.log("上"+$("p").offset().top+"左"+$("p").offset().left);
+                console.log("上"+$("p").position().top+"左"+$("p").position().left);
+            });
+            $("#btn3").click(function () {
+                $("#boxnb").offset({
+                    left:200,
+                    top:60
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<button id="btn1">获取offset坐标值</button>
+<button id="btn2">获取position坐标值</button>
+<button id="btn3">设置offset</button>
+<div class="box">
+<div class="box1">
+    <p> 我是现在结婚v不过没钱</p>
+</div></div>
+<div id="boxnb"></div>
+</body>
+</html>

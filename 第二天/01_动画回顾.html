@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            $("div:first").css({"height":"200px",
+            "background-color":"pink","margin-top":"50px"
+            });
+            $("#btn").click(function () {
+                var is=$("div").css("display");
+                if(is==="none")
+                {$("div").show();}
+                else
+                {$("div").hide();}
+            })
+        });
+    </script>
+</head>
+<body>
+<button id="btn">按钮</button>
+<div></div>
+</body>
+</html>

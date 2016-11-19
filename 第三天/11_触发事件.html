@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(function () {
+//             $("input:eq(0)").focus();
+//            $("input:eq(0)").trigger("focus");
+            $("input:eq(1)").on("click",function () {
+                $("input:eq(0)").triggerHandler("focus");//屏蔽浏览器行为
+            });
+            $("input:eq(0)").focus(function () {
+                alert("524asd");
+            })
+
+        })
+    </script>
+</head>
+<body>
+<form action="">
+    <label for="name">用户名</label>
+    <input type="text" id="name"/>
+    <input type="submit" value="提交" id="sub"/>
+    <input type="submit" value="触发提交" id="btn"/>
+</form>
+</body>
+</html>

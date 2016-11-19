@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        body {
+            font-size: 14px;
+        }
+
+        #ullis1 {
+            width: 1000px;
+            height: 20px;
+            margin: 5px;
+        }
+
+        #ullis1 li {
+            height: 20px;
+        }
+
+        .ullis2 li, .ullis3 li {
+            height: 40px;
+        }
+
+        #ullis1 li, .ullis2 li, .ullis3 li {
+            border: 1px solid green;
+            float: left
+        }
+
+        .ullis2, .ullis3 {
+            margin: 5px;
+            /*width: 1000px;*/
+            height: 40px;
+        }
+    </style>
+    <script src="../第一天/jquery-1.11.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#ullis1 li").css({"text-align": "center", "height": "20px"});
+            $("#ullis1 li:first,.ullis2 li:first,.ullis3 li:first").css("width", "40px");
+            $("#ullis1 li:eq(1),.ullis2 li:eq(1),.ullis3 li:eq(1)").css("width","180px");
+            $("#ullis1 li:eq(2),.ullis2 li:eq(2),.ullis3 li:eq(2)").css("width","180px");
+            $("#ullis1 li:eq(3),.ullis2 li:eq(3),.ullis3 li:eq(3)").css("width","200px");
+            $("#ullis1 li:eq(4),.ullis2 li:eq(4),.ullis3 li:eq(4)").css("width","300px");
+            $("#ullis1 li:eq(5),.ullis2 li:eq(5),.ullis3 li:eq(5)").css("width","80px");
+            $(".ullis2,.ullis3").mouseenter(
+                    function () {
+                        $(this).css("background-color","orange");
+                    }
+            );
+            $(".ullis2,.ullis3").mouseleave(
+                    function () {
+                        $(this).css("background-color","#fff");
+                    }
+            );
+            $(".ullis2 li:first,.ullis3 li:first").mouseup(function (event) {
+                x1=event.clientX-this.offsetLeft;
+                y1=event.clientY-this.offsetTop;
+                that=this;
+                $(document).mousemove(function (event) {x=event.clientX-x1;
+                    y=event.clientY-y1;
+                    $(that).parent().css({"position": "absolute","left":x,"top":y});
+                })
+            })
+
+        });
+    </script>
+</head>
+<body>
+<ul id="ullis1">
+    <li>编号</li>
+    <li>讨论区名</li>
+    <li>版主名</li>
+    <li>链接</li>
+    <li>论坛详细说明</li>
+    <li>编辑</li>
+</ul>
+<ul class="ullis2">
+    <li>1点击</li>
+    <li><input type="text"></li>
+    <li><input type="text"></li>
+    <li><textarea name="" cols="20" rows="2"></textarea></li>
+    <li><textarea name="" cols="30" rows="2"></textarea></li>
+    <li>
+        <input type="button" value="修改">
+        <input type="button" value="删除">
+    </li>
+</ul>
+<ul class="ullis3">
+    <li>2</li>
+    <li><input type="text"></li>
+    <li><input type="text"></li>
+    <li><textarea name="" cols="20" rows="2"></textarea></li>
+    <li><textarea name="" cols="30" rows="2"></textarea></li>
+    <li>
+        <input type="button" value="修改">
+        <input type="button" value="删除">
+    </li>
+</ul>
+</body>
+</html>

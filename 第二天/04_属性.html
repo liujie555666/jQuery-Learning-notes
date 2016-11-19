@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        /*div{*/
+            /*background-color: red;*/
+            /*height: 30px;*/
+        /*}*/
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+//           var lkjh= $("div").attr("id");
+//            alert(lkjh);
+//            var lkjh1= $("div").attr("class");
+//            alert(lkjh1);
+            // 通过attr可以获取元素的属性值或设置属性值,$("div").attr("id") 获取id.//获取div的id属性值,;$("div").attr("class","box2")//设置div的class属性值
+            //设置多个属性 需要传一个对象里边有具体每一个属性值.
+//            $("div").attr("class","box2");
+//            $("div:first").attr({"class":"box1 box2 box","title":"你好吗?"});
+//            $("div").attr("style","height:20px");
+            //
+//            $("div").attr("class",function (k,v) {
+//                alert(k);
+//                alert(v);
+//                return "box"+(k+10);
+//            });
+            //删除对应的哪个属性
+            setTimeout(function () {
+                $("div").eq(0).removeAttr("class");
+            },2000);
+
+        });
+    </script>
+</head>
+<body>
+<div id="box" class="box1"></div>
+<div id="box2" class="box3"></div>
+<div id="box1" class="box4"></div>
+<div id="box3" class="box5"></div>
+<div id="box5" class="box6"></div>
+</body>
+</html>

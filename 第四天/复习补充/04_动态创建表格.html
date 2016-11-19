@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            margin: 100px auto;
+            border-collapse: collapse;
+            /*合并表格边框*/
+            border-spacing:0;
+            /*一定要加上 预防有些浏览器不兼容*/
+        }
+        td,th{
+            width: 100px;
+            font-size: 20px;
+            border: 1px solid #333;
+            color: #369;
+        }
+        th{
+            background-color: #088;
+            font:700 30px/1 "yahei";
+        }
+    </style>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        var data=[
+            {name:"李月卡结婚",url:"www.baidu.com",address:"巴西"},
+            {name:"史密斯结婚",url:"www.sina.cn",address:"北京"},
+            {name:"南京话结婚",url:"www.163.com",address:"冬季"}
+        ];
+        $(function () {
+//     第一种动态创建表格
+// var html1="";
+//            for(var i=0;i<data.length;i++){
+//                html1+="<tr>";
+//                html1+="    <td>"+data[i].name+"</td>";
+//                html1+="    <td>"+data[i].url+"</td>";
+//                html1+="    <td>"+data[i].address+"</td>";
+//                html1+="</tr>";
+//            }
+//            $(".j_tb").html(html1);
+        //第二种动态创建表格
+            for(var i=0; i<data.length;i++){
+                var $trTmp=$("<tr></tr>");
+                $trTmp.append("<td>"+data[i].name+"</td>");
+                $trTmp.append("<td>"+data[i].url+"</td>");
+                $trTmp.append("<td>"+data[i].address+"</td>");
+//                $(".j_tb").append($trTmp);
+                $trTmp.appendTo(".j_tb");
+            }
+        });
+    </script>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>标题</th>
+        <th>标题</th>
+        <th>标题</th>
+    </tr>
+    </thead>
+    <tbody class="j_tb">
+    </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .demo{
+            height: 400px;
+            width: 400px;
+            border:1px solid #333333;
+        }
+    </style>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(function () {
+           //.data通过它往内存缓存
+            $(".demo").data("name",123).data("key",{
+                "userid":"1900",
+                "username":"asdf"
+            });
+            $("#j_btn").on("click",function () {
+                //移除一个缓存数据,如果里面不加东西,表示删除所有
+                $(".demo").removeData("name");
+
+                var value=$(".demo").data("name");
+                var value1=$(".demo").data("key");
+                $(".demo").text(value+value1.userid+value1.username);
+            })
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="获取data" id="j_btn">
+<div class="demo"></div>
+</body>
+</html>

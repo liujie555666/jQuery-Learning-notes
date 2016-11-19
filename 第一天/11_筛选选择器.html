@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            //.eq()
+            //eq类比
+            $("span").eq(2).css("font-size", "50px");
+//first
+            $("span").first().css("font-size", "40px");
+       //last
+            $("span").last().css("font-size","20px");
+            //
+            $("p").parent("#div").css("font-size","50px");
+            //兄弟选择器
+            $("#li04").siblings().css("font-size","10px");
+            //
+            $("#li04").siblings(".litm").css("font-size","20px");
+            //从父类中找子类id是li04的元素
+            $("ul").find("#li04").css("font-size","30px")
+
+        })
+    </script>
+</head>
+<body>
+<div>
+    <span>我是sp</span>
+    <span id="sn">我是sp</span>
+    <span>我是sp</span>
+</div>
+<div id="div">
+    <p>hello</p>
+</div>
+<div id="demo">
+    <p>adsds</p>
+</div>
+<ul>
+    <li>我是大明星01</li>
+    <li>我是大明星02</li>
+    <li>我是大明星03</li>
+    <li id="li04">我是大明星04</li>
+    <li>我是大明星05</li>
+    <li class="litm">我是大明星06</li>
+    <li>我是大明星07</li>
+    <li>我是大明星08</li>
+</ul>
+</body>
+</html>

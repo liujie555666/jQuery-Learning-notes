@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            var p=$("p");
+            //.html()如果有多个被选中,只会选中第一个;可以插入标签
+            //.text()如果有多个被选中,会把所有的放一块返回;不能插入标签
+            alert(p.html());
+            alert(p.text());
+
+            p.html("<p>aslkjdlkasd</p><a href=''></a>");
+//            p.text("<p>aslkjdlkasd</p><a href=''></a>");
+//        p.html(function (n) {
+//            return "asdasda"+n;
+//        });
+        });
+
+    </script>
+</head>
+<body>
+<p>我是短路</p>
+<p>我是短路</p>
+<p>我是短路</p>
+<p>我是短路</p>
+<p>我是短路</p>
+<p>我是短路</p>
+</body>
+</html>

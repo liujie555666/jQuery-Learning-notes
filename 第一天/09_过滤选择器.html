@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("ol")
+            //:odd   奇数选择器
+            $(".ollist li:odd").css("font-size","30px");
+            //even 偶数选择器
+            $(".ollist li:even").css("font-size","50px");
+            //eq(index) 从0开是第几个
+            $(".ollist2 li:eq(3)").css("font-size","20px");
+            //lt(index)  选中小于index的
+            $(".ollist2 li:lt(2)").css("font-size","10px");
+            //gt(index) 选中大于index的
+            $(".ollist2 li:gt(5)").css("font-size","40px");
+            //first
+            $(".ollist2 li:first").css("font-size","50px");
+            //last
+            $(".ollist2 li:last").css("font-size","10px");
+        })
+    </script>
+</head>
+<body>
+<ol class="ollist">
+    <li>01 男嘉宾</li>
+    <li>02 男嘉宾</li>
+    <li>03 男嘉宾</li>
+    <li>04 男嘉宾</li>
+    <li>05 男嘉宾</li>
+    <li>06 男嘉宾</li>
+    <li>07 男嘉宾</li>
+    <li>08 男嘉宾</li>
+    <li>09 男嘉宾</li>
+    <li>10 男嘉宾</li>
+</ol>
+<ol class="ollist2">
+    <li>01 男嘉宾</li>
+    <li>02 男嘉宾</li>
+    <li>03 男嘉宾</li>
+    <li>04 男嘉宾</li>
+    <li>05 男嘉宾</li>
+    <li>06 男嘉宾</li>
+    <li>07 男嘉宾</li>
+    <li>08 男嘉宾</li>
+    <li>09 男嘉宾</li>
+    <li>10 男嘉宾</li>
+</ol>
+</body>
+</html>

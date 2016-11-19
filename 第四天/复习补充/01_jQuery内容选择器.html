@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(function () {
+            $("div:parent").css({
+                height: 100,
+                backgroundColor: "#eee"
+            }).html("135436阿斯顿框架");
+            $("div:contains('哥')").css({
+                fontSize: 50,
+                backgroundColor: "#369",
+                color: "red"
+            });
+            $("div:has(h1)").css({
+                height: 20,
+                backgroundColor: "#333"
+            }).children("h1").html("我么阿12");
+            $("div:empty").css({
+                height: 50,
+                backgroundColor: "#369"
+            }).html("我么阿斯顿框架");
+
+
+        });
+    </script>
+</head>
+<body>
+<div>小明</div>
+<div>哥哥</div>
+<div>小强</div>
+<div>妹妹</div>
+<div>阿姐</div>
+<div></div>
+<div></div>
+<div>
+    <h1></h1>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="jquery-1.11.1.js"></script>
+<script>
+    $(document).ready(function () {
+        //属性选择器 有href的
+        $("a[href]").css("color","red");
+        //a  href是网易的
+        $("a[href='http://www.163.com']").css("font-size","30px");
+        //选中a标签href不是百度的,没有href也会被选
+        $("a[href!='http://www.baidu.com']").css("background-color","blue");
+        //选中href以w开头的
+        $("a[href^='w']").css("color","pink");
+        //选中href中以cn结束的
+        $("a[href$='cn']").css("font-size","60px");
+        //选中href中包含si的
+        $("a[href*='bai']").css("font-size","30px");
+    })
+    //交集
+    $("a[href][title*='的']").css("font-size","20px");
+
+</script>
+<body>
+<div class="divItem">
+    <a href="http://www.baidu.com">百度</a>
+    <a href="http://www.163.com" title="网易官网">网易</a>
+    <a href="www.sina.cn">新浪</a>
+    <a>我没有href</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*li{*/
+        /*color: red;*/
+        /*font-size: 18px;*/
+        /*}*/
+        #bo3 {
+            font-size: 50px;
+            background-color: pink;
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            //id选择器
+            $("#demo").css("color", "red");
+//            $("#bo3").css("background-color","red");
+//            $("#bo3").css({"background-color":"red"});
+//           var bg= $("#bo3").css("background-color");
+            var bg = $("#bo3").css(["background-color"], ["font-size"]);
+            console.log(bg["background-color"] + bg["font-size"]);
+            //类选择器
+            $(".box1").css("font-size", "60px");
+            $(".box").css({"font-size": "10px"});
+        })
+        $("li").css("font-size", "20px");
+        //通配符
+        $("*").css("font-size", "30px");
+        //并集选择器\
+        $(".box1,div").css("color", "blue");
+        //交集选择器
+        $("li#bo3").css("color", "red");
+    </script>
+</head>
+<body>
+<ul id="demo">
+    <li class="box1">兄弟很多1</li>
+    <li class="box">兄弟很多2</li>
+    <li id="bo3">兄弟很多3</li>
+    <li class="box">兄弟很多4</li>
+    <li>兄弟很多5</li>
+    <li>兄弟很多6</li>
+    <li>兄弟很多7</li>
+</ul>
+<div>asdasdsa</div>
+</body>
+</html>

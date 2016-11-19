@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            height: 200px;
+            background-color: pink;
+            margin-bottom: 10px;
+            display: none;
+        }
+    </style>
+    <script>
+        onload=function () {
+            document.getElementById("demo").onclick=function () {
+                //让div显示出来
+                //给div一个文本内容
+                var divs=document.getElementsByTagName("div");
+                for(var i=0;i<divs.length;i++){
+                    divs[i].style.display="block";
+                    divs[i].innerText="我是内容"+i;
+                }
+            }
+        }
+        //写多个onload会把前面的onload覆盖掉
+//        onload=function () {
+//            alert("wojkhsdgfahjsdgf");
+//        }
+    </script>
+</head>
+<body>
+<input type="button" value="按钮" id="demo"/>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>

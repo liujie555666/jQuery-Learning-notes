@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //效率低(new)
+    var obj=new Object();
+    obj.name="李四";
+    console.log(obj.name);
+    //效率高
+    var obj1={};
+    obj1.name="张四";
+    console.log(obj1.name);
+    function Car() {
+
+    }
+    Car.prototype.run=function () {
+    }
+    var obj2=Object.create(Car.prototype);
+    obj2.name="jhon.四";
+    console.log(obj2.name);
+
+</script>
+</body>
+</html>

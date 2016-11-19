@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(function () {
+//            $("li").on("click",function () {
+//                alert($(this).html());
+//            });
+            //map函数
+            $.map($("li"),function (objs,inx) {
+                console.log(inx);
+                return objs;
+            })
+            var arr=$("li").map(function (inx,objs) {
+
+                return objs;
+            })
+        })
+    </script>
+</head>
+<body>
+<ul>
+    <li>我是li01</li>
+    <li>我是li02</li>
+    <li>我是li03</li>
+    <li>我是li04</li>
+    <li>我是li05</li>
+    <li>我是li06</li>
+    <li>我是li07</li>
+    <li>我是li08</li>
+    <li>我是li09</li>
+    <li>我是li10</li>
+</ul>
+</body>
+</html>

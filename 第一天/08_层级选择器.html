@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("ul").css("list-style","none");
+            $("li").css("font-size","50px");
+            //后代选择器
+            $(".wrap li ul li span").css("font-size","10px");
+            //子代选择器
+            $(".wrap>ul>li>ul>li").css({"background-color":"red","font-size":"20px"});
+            //近邻选择器
+            $(".wrap+div").css("font-size","32px");
+            //兄弟选择器:从.line后面值满足里的元素
+            $(".line~li").css("font-size","15px")
+        });
+    </script>
+</head>
+<body>
+<div class="wrap">
+    <ul>
+        <li>1我是01个li
+            <ul>
+                <li>孩子很多01
+                    <span>你好1</span><span>你好2</span><span>你好3</span>
+                </li>
+                <li>孩子很多02</li>
+                <li>孩子很多03</li>
+            </ul>
+        </li>
+        <li>2我是02个li</li>
+        <li>3我是03个li</li>
+        <li>4我是04个li</li>
+        <li>5我是05个li</li>
+        <li>6我是06个li</li>
+        <li class="line">7我是07个li</li>
+        <li>8我是08个li</li>
+        <li>9我是09个li</li>
+        <li>10我是10个li</li>
+    </ul>
+</div>
+<div>年结束了的宽和高</div>
+</body>
+</html>

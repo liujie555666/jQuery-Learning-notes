@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            height: 200px;
+            display: none;
+            background-color: pink;
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            $("button").click(function () {
+                $("div").show(500).delay(5000).fadeOut(500);
+            });
+        });
+    </script>
+</head>
+<body>
+<button>delay</button>
+<div></div>
+</body>
+</html>
